@@ -26,6 +26,9 @@
                 "containerPort": 3306
               }
             ],
+            "execAction": [
+              "mysql -uroot -proot --execute=CREATE USER 'developer'@'localhost' IDENTIFIED BY 'test123'; --execute=GRANT ALL PRIVILEGES ON *.* TO 'developer'@'localhost' WITH GRANT OPTION; --execute=CREATE USER 'developer'@'%' IDENTIFIED BY 'test123'; --execute=GRANT ALL PRIVILEGES ON *.* TO 'developer'@'%' WITH GRANT OPTION;"
+            ],
             "env": [
               {
                 "name": "MYSQL_ROOT_PASSWORD",
